@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/img/favicon.png" rel="icon" />
+      <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+      <!-- Vendor CSS Files -->
+      <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+      <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+      <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+      <link href="assets/vendor/owl/owl.carousel.min.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css" />
+      <link href="assets/css/style.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css" />
+    <style>
+        .card-header {
+            background-color: #343a40;
+            color: white;
+        }
+        .btn-custom {
+            background-color: #6c757d;
+            color: white;
+        }
+        .modal-header {
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h3>Refund Management</h3>
+            </div>
+            <div class="card-body">
+                <h5>Manage Refund Requests</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>User Name</th>
+                            <th>Request Date</th>
+                            <th>Order ID</th>
+                            <th>Refund Amount</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Sample data, to be dynamically filled -->
+                        <tr>
+                            <td>John Doe</td>
+                            <td>2024-07-01</td>
+                            <td>12345</td>
+                            <td>$50.00</td>
+                            <td>Pending</td>
+                            <td>
+                                <button class="btn btn-success btn-custom" data-bs-toggle="modal" data-bs-target="#acceptRefundModal" data-order-id="12345">Accept</button>
+                                <button class="btn btn-danger btn-custom" data-bs-toggle="modal" data-bs-target="#rejectRefundModal" data-order-id="12345">Reject</button>
+                            </td>
+                        </tr>
+                        <!-- More rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accept Refund Modal -->
+    <div class="modal fade" id="acceptRefundModal" tabindex="-1" aria-labelledby="acceptRefundModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="acceptRefundModalLabel">Accept Refund Request</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="acceptRefundForm">
+                        <div class="mb-3">
+                            <label for="acceptOrderId" class="form-label">Order ID</label>
+                            <input type="text" class="form-control" id="acceptOrderId" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="acceptRefundAmount" class="form-label">Refund Amount</label>
+                            <input type="text" class="form-control" id="acceptRefundAmount" readonly>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-custom">Confirm Refund</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reject Refund Modal -->
+    <div class="modal fade" id="rejectRefundModal" tabindex="-1" aria-labelledby="rejectRefundModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rejectRefundModalLabel">Reject Refund Request</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="rejectRefundForm">
+                        <div class="mb-3">
+                            <label for="rejectOrderId" class="form-label">Order ID</label>
+                            <input type="text" class="form-control" id="rejectOrderId" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="rejectReason" class="form-label">Reason for Rejection</label>
+                            <textarea class="form-control" id="rejectReason" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-danger btn-custom">Confirm Rejection</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+     <script src="assets/vendor/jquery.min.js"></script>
+      <script src="assets/js/sidebar.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/owl/owl.carousel.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+      <script src="assets/js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            $('#acceptRefundModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget);
+                var orderId = button.data('order-id');
+                var modal = $(this);
+                modal.find('.modal-title').text('Accept Refund for Order ' + orderId);
+                modal.find('#acceptOrderId').val(orderId);
+
+                // Load the refund details from the server or a predefined variable
+                // For this example, we'll use placeholder data
+                var refundDetails = {
+                    amount: '$50.00'
+                };
+
+                modal.find('#acceptRefundAmount').val(refundDetails.amount);
+            });
+
+            $('#rejectRefundModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget);
+                var orderId = button.data('order-id');
+                var modal = $(this);
+                modal.find('.modal-title').text('Reject Refund for Order ' + orderId);
+                modal.find('#rejectOrderId').val(orderId);
+            });
+
+            $('#acceptRefundForm').on('submit', function (event) {
+                event.preventDefault();
+                // Save the acceptance to the server
+                // Close the modal
+                $('#acceptRefundModal').modal('hide');
+            });
+
+            $('#rejectRefundForm').on('submit', function (event) {
+                event.preventDefault();
+                // Save the rejection and reason to the server
+                // Close the modal
+                $('#rejectRefundModal').modal('hide');
+            });
+        });
+       </script>
+</body>
+</html>
