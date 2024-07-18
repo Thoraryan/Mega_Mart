@@ -46,7 +46,11 @@
         <div class="main-content">
             <div class="admin_header">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-2 text-center">
+                    <div class="col-3 text-center d-flex gap-2 align-items-center">
+                        <button class="btn bg-main p-0 border-0 cursor-pointer d-lg-none d-block"
+                            onclick="sideBarToggle()">
+                            <i class="fa fa-bars text-white fs-4 fw-semibold mb-0 pb-0"></i>
+                        </button>
                         <a class="logo d-flex gap-2 align-items-center" href="dashboard.html">
                             <div class="logo-wrapper">
                                 <img src="./assets/img/main_logo.png" alt="" class="w-100 h-100">
@@ -55,8 +59,8 @@
                         </a>
                     </div>
                     <div class="col-auto">
-                        <div class="row">
-                            <div class="col-auto pe-2">
+                        <div class="row ">
+                            <div class="col-auto pe-2 d-md-block d-none">
                                 <a class="language_change" href="javascript:;"><img
                                         src="assets/img/saudi_arabia_img.png" alt="">Saudi Arabia</a>
                             </div>
@@ -73,9 +77,9 @@
                                         <li><a class="dropdown-item" href="login.html">Logout</a></li>
                                     </ul>
                                 </div>
-                                <div class="toggle_btns">
-                                    <i class="fas fa-bars"></i>
-                                </div>
+                                <!-- <div class="toggle_btns">
+                                       <i class="fas fa-bars"></i>
+                                    </div> -->
                             </div>
                         </div>
                     </div>
@@ -83,141 +87,141 @@
             </div>
             <div class="admin_main">
                 <div class="admin_siderbarr">
-               <a class="sidebar-link" href="dashboard.html">
-                  <span><i class="fas fa-home"></i> </span>
-                  Dashboard
-               </a>
-               <a class="sidebar-link" href="users_management.html">
-                  <span><i class="fas fa-users"></i> </span>
-                  Users Management
-               </a>
-               <a class="sidebar-link" href="affiliate_management.html">
-                  <span><i class="fa-brands fa-affiliatetheme"></i></span>
-                  Affiliate Management
-               </a>
-               <a class="sidebar-link" href="orders_management.html">
-                  <span><i class="fa-brands fa-jedi-order"></i></span>
-                  Order Management
-               </a>
-               <a class="sidebar-link" href="Category_list.html">
-                  <span><i class="fa-solid fa-bag-shopping"></i></span>
-                  Category Management
-               </a>
-               <a class="sidebar-link" href="survey_management.html">
-                  <span><i class="fa-solid fa-fire-flame-curved"></i></span>
-                  Survey Management
-               </a>
-               <div class="item w-100">
-                  <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
-                     <div>
-                        <span class=""><i class="fa-solid fa-shopping-cart"></i></span>
-                        Products Management
-                     </div>
-                     <i class="fas fa-angle-right dropdown text-end"></i>
-                  </a>
-                  <div class="sub-menu mt-2">
-                     <a href="Product.html" class="sidebar-link sub-item">List Product</a>
-                     <a href="AddProduct.html" class="sidebar-link sub-item">Add Product</a>
-                  </div>
-               </div>
-               <a class="sidebar-link" href="loyalty_program_management.html">
-                  <span><i class="fa fa-map-marked"></i></span>
-                  Loyalty Management
-               </a>
-               <a class="sidebar-link" href="membership_plan.html">
-                  <span><i class="fas fa-hand-holding-usd"></i></span>
-                  Membership Plan
-               </a>
-               <a class="sidebar-link" href="reports_management.html">
-                  <span><i class="fa fa-file"></i></span>
-                  Reports Management
-               </a>
-               <div class="item w-100">
-                  <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
-                     <div>
-                        <span class=""><i class="fa-solid fa-bars-progress"></i></span>
-                        Banner Management
-                     </div>
-                     <i class="fas fa-angle-right dropdown2 text-end"></i>
-                  </a>
-                  <div class="sub-menu2 mt-2" style="display: none;">
-                     <a href="banner_management.html" class="sidebar-link sub-item2">Banner List</a>
-                     <a href="banner_add.html" class="sidebar-link sub-item2">Banner Add</a>
-                  </div>
-               </div>
-               <div class="item w-100">
-                  <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
-                     <div>
-                        <span class="">
-                           <i class="fa-brands fa-buffer"></i>
-                        </span>
-                        Offer & Gifts
-                     </div>
-                     <i class="fas fa-angle-right dropdown3 text-end"></i>
-                  </a>
-                  <div class="sub-menu3 mt-2" style="display: none;">
-                     <a href="offer&gift_management.html" class="sidebar-link sub-item3">Offer & Gift List</a>
-                     <a href="offer_add.html" class="sidebar-link sub-item3">Offer & Gift Add</a>
-                  </div>
-               </div>
-               <div class="item w-100">
-                  <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
-                     <div>
-                        <span><i class="fa-solid fa-blog"></i></span>
-                        Blog Management
-                     </div>
-                     <i class="fas fa-angle-right dropdown4 text-end"></i>
-                  </a>
-                  <div class="sub-menu4 mt-2" style="display: none;">
-                     <a href="blog_management.html" class="sidebar-link sub-item4">Blog List</a>
-                     <a href="add_blog.html" class="sidebar-link sub-item4">Blog Add</a>
-                  </div>
-               </div>
-               <a class="sidebar-link" href="beauty_tips_&_news_management.html">
-                  <span><i class="fa-brands fa-gratipay"></i></span>
-                  Beauty Tips & News
-               </a>
-               <a class="sidebar-link" href="inventory_management.html">
-                  <span><i class="fa-solid fa-boxes-stacked"></i></span>
-                  Inventory Management
-               </a>
-               <a class="sidebar-link" href="payout_affiliate_management.html">
-                  <span><i class="fas fa-coins"></i></span>
-                  Pay-Out Affiliate
-               </a>
-               <a class="sidebar-link" href="refund_management.html">
-                  <span><i class="fa-solid fa-money-check-dollar"></i></span>
-                  Refund Management
-               </a>
-               <a class="sidebar-link" href="transaction_management.html">
-                  <span><i class="fas fa-sync-alt"></i></span>
-                  Transaction
-               </a>
-               <div class="item w-100">
-                  <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
-                     <div>
-                        <span><i class="fa-solid fa-ticket"></i></i></span>
-                        Promo Coupon
-                     </div>
-                     <i class="fas fa-angle-right dropdown5 text-end"></i>
-                  </a>
-                  <div class="sub-menu5 mt-2" style="display: none;">
-                     <a href="promo&coupon_management.html" class="sidebar-link sub-item5">Promo Coupon List</a>
-                     <a href="promo&coupon_add.html" class="sidebar-link sub-item5">Promo Coupon Add</a>
-                  </div>
-               </div>
-               <a class="sidebar-link" href="help&support.html">
-                  <span><i class="fas fa-headset"></i></span>
-                  Help & Support
-               </a>
-               <a class="sidebar-link" href="contact_management.html">
-                  <span><i class="fa fa-user-cog"></i></span>
-                  Content Management
-               </a>
-               <!-- <a class="sidebar-link" href="Product.html"><span><i class="fa-solid fa-shopping-cart"></i></span>Product</a> -->
-               <a class="sidebar-link" href="login.html"><span><i class="fas fa-sign-out-alt"></i></span>
-                  Logout</a>
-            </div>
+                    <a class="sidebar-link" href="dashboard.html">
+                        <span><i class="fas fa-home"></i> </span>
+                        Dashboard
+                    </a>
+                    <a class="sidebar-link" href="users_management.html">
+                        <span><i class="fas fa-users"></i> </span>
+                        Users Management
+                    </a>
+                    <a class="sidebar-link" href="affiliate_management.html">
+                        <span><i class="fa-brands fa-affiliatetheme"></i></span>
+                        Affiliate Management
+                    </a>
+                    <a class="sidebar-link" href="orders_management.html">
+                        <span><i class="fa-brands fa-jedi-order"></i></span>
+                        Order Management
+                    </a>
+                    <a class="sidebar-link" href="Category_list.html">
+                        <span><i class="fa-solid fa-bag-shopping"></i></span>
+                        Category Management
+                    </a>
+                    <a class="sidebar-link" href="survey_management.html">
+                        <span><i class="fa-solid fa-fire-flame-curved"></i></span>
+                        Survey Management
+                    </a>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span class=""><i class="fa-solid fa-shopping-cart"></i></span>
+                                Products Management
+                            </div>
+                            <i class="fas fa-angle-right dropdown text-end"></i>
+                        </a>
+                        <div class="sub-menu mt-2">
+                            <a href="Product.html" class="sidebar-link sub-item">List Product</a>
+                            <a href="AddProduct.html" class="sidebar-link sub-item">Add Product</a>
+                        </div>
+                    </div>
+                    <a class="sidebar-link" href="loyalty_program_management.html">
+                        <span><i class="fa fa-map-marked"></i></span>
+                        Loyalty Management
+                    </a>
+                    <a class="sidebar-link" href="membership_plan.html">
+                        <span><i class="fas fa-hand-holding-usd"></i></span>
+                        Membership Plan
+                    </a>
+                    <a class="sidebar-link" href="reports_management.html">
+                        <span><i class="fa fa-file"></i></span>
+                        Reports Management
+                    </a>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span class=""><i class="fa-solid fa-bars-progress"></i></span>
+                                Banner Management
+                            </div>
+                            <i class="fas fa-angle-right dropdown2 text-end"></i>
+                        </a>
+                        <div class="sub-menu2 mt-2" style="display: none;">
+                            <a href="banner_management.html" class="sidebar-link sub-item2">Banner List</a>
+                            <a href="banner_add.html" class="sidebar-link sub-item2">Banner Add</a>
+                        </div>
+                    </div>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span class="">
+                                    <i class="fa-brands fa-buffer"></i>
+                                </span>
+                                Offer & Gifts
+                            </div>
+                            <i class="fas fa-angle-right dropdown3 text-end"></i>
+                        </a>
+                        <div class="sub-menu3 mt-2" style="display: none;">
+                            <a href="offer&gift_management.html" class="sidebar-link sub-item3">Offer & Gift List</a>
+                            <a href="offer_add.html" class="sidebar-link sub-item3">Offer & Gift Add</a>
+                        </div>
+                    </div>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span><i class="fa-solid fa-blog"></i></span>
+                                Blog Management
+                            </div>
+                            <i class="fas fa-angle-right dropdown4 text-end"></i>
+                        </a>
+                        <div class="sub-menu4 mt-2" style="display: none;">
+                            <a href="blog_management.html" class="sidebar-link sub-item4">Blog List</a>
+                            <a href="add_blog.html" class="sidebar-link sub-item4">Blog Add</a>
+                        </div>
+                    </div>
+                    <a class="sidebar-link" href="beauty_tips_&_news_management.html">
+                        <span><i class="fa-brands fa-gratipay"></i></span>
+                        Beauty Tips & News
+                    </a>
+                    <a class="sidebar-link" href="inventory_management.html">
+                        <span><i class="fa-solid fa-boxes-stacked"></i></span>
+                        Inventory Management
+                    </a>
+                    <a class="sidebar-link" href="payout_affiliate_management.html">
+                        <span><i class="fas fa-coins"></i></span>
+                        Pay-Out Affiliate
+                    </a>
+                    <a class="sidebar-link" href="refund_management.html">
+                        <span><i class="fa-solid fa-money-check-dollar"></i></span>
+                        Refund Management
+                    </a>
+                    <a class="sidebar-link" href="transaction_management.html">
+                        <span><i class="fas fa-sync-alt"></i></span>
+                        Transaction
+                    </a>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span><i class="fa-solid fa-ticket"></i></i></span>
+                                Promo Coupon
+                            </div>
+                            <i class="fas fa-angle-right dropdown5 text-end"></i>
+                        </a>
+                        <div class="sub-menu5 mt-2" style="display: none;">
+                            <a href="promo&coupon_management.html" class="sidebar-link sub-item5">Promo Coupon List</a>
+                            <a href="promo&coupon_add.html" class="sidebar-link sub-item5">Promo Coupon Add</a>
+                        </div>
+                    </div>
+                    <a class="sidebar-link" href="help&support.html">
+                        <span><i class="fas fa-headset"></i></span>
+                        Help & Support
+                    </a>
+                    <a class="sidebar-link" href="contact_management.html">
+                        <span><i class="fa fa-user-cog"></i></span>
+                        Content Management
+                    </a>
+                    <!-- <a class="sidebar-link" href="Product.html"><span><i class="fa-solid fa-shopping-cart"></i></span>Product</a> -->
+                    <a class="sidebar-link" href="login.html"><span><i class="fas fa-sign-out-alt"></i></span>
+                        Logout</a>
+                </div>
                 <div class="admin_contentpart">
                     <div class="row">
                         <div class="col-md-12 mt-4 mt-md-0">
@@ -284,8 +288,9 @@
                                                         <td>Apple Pay</td>
                                                         <td>Premium</td>
                                                         <td>
-                                                            <div class="d-flex">
-                                                                <a href="javascript:;" class="Table_btn"><i
+                                                            <div
+                                                                class="d-flex justify-content-center align-items-center">
+                                                                <a href="javascript:;" class="Table_btn bg-danger"><i
                                                                         class="fa fa-trash"></i></a>
                                                             </div>
                                                         </td>
@@ -300,8 +305,9 @@
                                                         <td>Debit Card</td>
                                                         <td>Standard</td>
                                                         <td>
-                                                            <div class="d-flex">
-                                                                <a href="javascript:;" class="Table_btn"><i
+                                                            <div
+                                                                class="d-flex justify-content-center align-items-center">
+                                                                <a href="javascript:;" class="Table_btn bg-danger"><i
                                                                         class="fa fa-trash"></i></a>
                                                             </div>
                                                         </td>
@@ -316,8 +322,9 @@
                                                         <td>Credit Card</td>
                                                         <td>Basic</td>
                                                         <td>
-                                                            <div class="d-flex">
-                                                                <a href="javascript:;" class="Table_btn"><i
+                                                            <div
+                                                                class="d-flex justify-content-center align-items-center">
+                                                                <a href="javascript:;" class="Table_btn bg-danger"><i
                                                                         class="fa fa-trash"></i></a>
                                                             </div>
                                                         </td>

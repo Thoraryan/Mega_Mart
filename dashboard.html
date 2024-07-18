@@ -26,7 +26,7 @@
       <table id="loader">
          <tr>
             <td>
-               <img src="./assets/img/logo.jpg" alt="" class="w-fit vh-50">
+               <img src="./assets/img/logo.jpg" alt="" class="w-fit vh-25">
                <div class="multi-spinner-container">
                   <div class="multi-spinner">
                      <div class="multi-spinner">
@@ -47,7 +47,7 @@
          <div class="admin_header">
             <div class="row justify-content-between align-items-center">
                <div class="col-3 text-center d-flex gap-2 align-items-center">
-                  <button class="btn bg-main p-0 border-0 cursor-pointer" onclick="sideBarToggle()">
+                  <button class="btn bg-main p-0 border-0 cursor-pointer d-lg-none d-block" onclick="sideBarToggle()">
                      <i class="fa fa-bars text-white fs-4 fw-semibold mb-0 pb-0"></i>
                   </button>
                   <a class="logo d-flex gap-2 align-items-center" href="dashboard.html">
@@ -58,8 +58,8 @@
                   </a>
                </div>
                <div class="col-auto">
-                  <div class="row">
-                     <div class="col-auto pe-2">
+                  <div class="row ">
+                     <div class="col-auto pe-2 d-md-block d-none">
                         <a class="language_change" href="javascript:;"><img src="assets/img/saudi_arabia_img.png"
                               alt="">Saudi Arabia</a>
                      </div>
@@ -75,9 +75,9 @@
                               <li><a class="dropdown-item" href="login.html">Logout</a></li>
                            </ul>
                         </div>
-                        <div class="toggle_btns">
+                        <!-- <div class="toggle_btns">
                            <i class="fas fa-bars"></i>
-                        </div>
+                        </div> -->
                      </div>
                   </div>
                </div>
@@ -85,7 +85,7 @@
          </div>
 
          <div class="admin_main">
-            <div class="admin_siderbarr">
+            <div class="admin_siderbarr pt-2">
                <a class="sidebar-link" href="dashboard.html">
                   <span><i class="fas fa-home"></i> </span>
                   Dashboard
@@ -578,7 +578,7 @@
                                        <td class="text-center px-1">$999.99</td>
                                        <td class="text-center px-1">117/402 krishnapuri</td>
                                        <td class="text-center px-1">
-                                          <a class="bg-main py-1 px-1 comman_border_design common_table_text">
+                                          <a class="text-success fw-semibold">
                                              Deliverd
                                           </a>
                                        </td>
@@ -597,7 +597,7 @@
                                        <td class="text-center px-1">$999.99</td>
                                        <td class="text-center px-1">117/402 krishnapuri</td>
                                        <td class="text-center px-1">
-                                          <a class="bg-main py-1 px-1 comman_border_design common_table_text">
+                                          <a class="text-danger fw-semibold">
                                              Not Deliverd
                                           </a>
                                        </td>
@@ -616,7 +616,7 @@
                                        <td class="text-center px-1">$999.99</td>
                                        <td class="text-center px-1">117/402 krishnapuri</td>
                                        <td class="text-center px-1">
-                                          <a class="bg-main py-1 px-1 comman_border_design common_table_text">
+                                          <a class="text-success fw-semibold">
                                              Deliverd
                                           </a>
                                        </td>
@@ -635,7 +635,7 @@
                                        <td class="text-center px-1">$999.99</td>
                                        <td class="text-center px-1">117/402 krishnapuri</td>
                                        <td class="text-center px-1">
-                                          <a class="bg-main py-1 px-1 comman_border_design common_table_text">
+                                          <a class="text-danger fw-semibold">
                                              Not Deliverd
                                           </a>
                                        </td>

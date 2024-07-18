@@ -10,7 +10,7 @@ document.getElementsByTagName('body')[0].onload = function () {
    setTimeout(function () {
       $("#loader").addClass('d-none');
       $('.main-content').addClass('d-block');
-   }, 3000);
+   }, 1500);
 }
 // line chart 
 const ctx = document.getElementById("chart").getContext('2d');

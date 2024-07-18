@@ -46,7 +46,11 @@
         <div class="main-content">
             <div class="admin_header">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-2 text-center">
+                    <div class="col-3 text-center d-flex gap-2 align-items-center">
+                        <button class="btn bg-main p-0 border-0 cursor-pointer d-lg-none d-block"
+                            onclick="sideBarToggle()">
+                            <i class="fa fa-bars text-white fs-4 fw-semibold mb-0 pb-0"></i>
+                        </button>
                         <a class="logo d-flex gap-2 align-items-center" href="dashboard.html">
                             <div class="logo-wrapper">
                                 <img src="./assets/img/main_logo.png" alt="" class="w-100 h-100">
@@ -55,8 +59,8 @@
                         </a>
                     </div>
                     <div class="col-auto">
-                        <div class="row">
-                            <div class="col-auto pe-2">
+                        <div class="row ">
+                            <div class="col-auto pe-2 d-md-block d-none">
                                 <a class="language_change" href="javascript:;"><img
                                         src="assets/img/saudi_arabia_img.png" alt="">Saudi Arabia</a>
                             </div>
@@ -73,9 +77,9 @@
                                         <li><a class="dropdown-item" href="login.html">Logout</a></li>
                                     </ul>
                                 </div>
-                                <div class="toggle_btns">
-                                    <i class="fas fa-bars"></i>
-                                </div>
+                                <!-- <div class="toggle_btns">
+                                       <i class="fas fa-bars"></i>
+                                    </div> -->
                             </div>
                         </div>
                     </div>
@@ -84,141 +88,141 @@
 
             <div class="admin_main">
                 <div class="admin_siderbarr">
-               <a class="sidebar-link" href="dashboard.html">
-                  <span><i class="fas fa-home"></i> </span>
-                  Dashboard
-               </a>
-               <a class="sidebar-link" href="users_management.html">
-                  <span><i class="fas fa-users"></i> </span>
-                  Users Management
-               </a>
-               <a class="sidebar-link" href="affiliate_management.html">
-                  <span><i class="fa-brands fa-affiliatetheme"></i></span>
-                  Affiliate Management
-               </a>
-               <a class="sidebar-link" href="orders_management.html">
-                  <span><i class="fa-brands fa-jedi-order"></i></span>
-                  Order Management
-               </a>
-               <a class="sidebar-link" href="Category_list.html">
-                  <span><i class="fa-solid fa-bag-shopping"></i></span>
-                  Category Management
-               </a>
-               <a class="sidebar-link" href="survey_management.html">
-                  <span><i class="fa-solid fa-fire-flame-curved"></i></span>
-                  Survey Management
-               </a>
-               <div class="item w-100">
-                  <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
-                     <div>
-                        <span class=""><i class="fa-solid fa-shopping-cart"></i></span>
-                        Products Management
-                     </div>
-                     <i class="fas fa-angle-right dropdown text-end"></i>
-                  </a>
-                  <div class="sub-menu mt-2">
-                     <a href="Product.html" class="sidebar-link sub-item">List Product</a>
-                     <a href="AddProduct.html" class="sidebar-link sub-item">Add Product</a>
-                  </div>
-               </div>
-               <a class="sidebar-link" href="loyalty_program_management.html">
-                  <span><i class="fa fa-map-marked"></i></span>
-                  Loyalty Management
-               </a>
-               <a class="sidebar-link" href="membership_plan.html">
-                  <span><i class="fas fa-hand-holding-usd"></i></span>
-                  Membership Plan
-               </a>
-               <a class="sidebar-link" href="reports_management.html">
-                  <span><i class="fa fa-file"></i></span>
-                  Reports Management
-               </a>
-               <div class="item w-100">
-                  <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
-                     <div>
-                        <span class=""><i class="fa-solid fa-bars-progress"></i></span>
-                        Banner Management
-                     </div>
-                     <i class="fas fa-angle-right dropdown2 text-end"></i>
-                  </a>
-                  <div class="sub-menu2 mt-2" style="display: none;">
-                     <a href="banner_management.html" class="sidebar-link sub-item2">Banner List</a>
-                     <a href="banner_add.html" class="sidebar-link sub-item2">Banner Add</a>
-                  </div>
-               </div>
-               <div class="item w-100">
-                  <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
-                     <div>
-                        <span class="">
-                           <i class="fa-brands fa-buffer"></i>
-                        </span>
-                        Offer & Gifts
-                     </div>
-                     <i class="fas fa-angle-right dropdown3 text-end"></i>
-                  </a>
-                  <div class="sub-menu3 mt-2" style="display: none;">
-                     <a href="offer&gift_management.html" class="sidebar-link sub-item3">Offer & Gift List</a>
-                     <a href="offer_add.html" class="sidebar-link sub-item3">Offer & Gift Add</a>
-                  </div>
-               </div>
-               <div class="item w-100">
-                  <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
-                     <div>
-                        <span><i class="fa-solid fa-blog"></i></span>
-                        Blog Management
-                     </div>
-                     <i class="fas fa-angle-right dropdown4 text-end"></i>
-                  </a>
-                  <div class="sub-menu4 mt-2" style="display: none;">
-                     <a href="blog_management.html" class="sidebar-link sub-item4">Blog List</a>
-                     <a href="add_blog.html" class="sidebar-link sub-item4">Blog Add</a>
-                  </div>
-               </div>
-               <a class="sidebar-link" href="beauty_tips_&_news_management.html">
-                  <span><i class="fa-brands fa-gratipay"></i></span>
-                  Beauty Tips & News
-               </a>
-               <a class="sidebar-link" href="inventory_management.html">
-                  <span><i class="fa-solid fa-boxes-stacked"></i></span>
-                  Inventory Management
-               </a>
-               <a class="sidebar-link" href="payout_affiliate_management.html">
-                  <span><i class="fas fa-coins"></i></span>
-                  Pay-Out Affiliate
-               </a>
-               <a class="sidebar-link" href="refund_management.html">
-                  <span><i class="fa-solid fa-money-check-dollar"></i></span>
-                  Refund Management
-               </a>
-               <a class="sidebar-link" href="transaction_management.html">
-                  <span><i class="fas fa-sync-alt"></i></span>
-                  Transaction
-               </a>
-               <div class="item w-100">
-                  <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
-                     <div>
-                        <span><i class="fa-solid fa-ticket"></i></i></span>
-                        Promo Coupon
-                     </div>
-                     <i class="fas fa-angle-right dropdown5 text-end"></i>
-                  </a>
-                  <div class="sub-menu5 mt-2" style="display: none;">
-                     <a href="promo&coupon_management.html" class="sidebar-link sub-item5">Promo Coupon List</a>
-                     <a href="promo&coupon_add.html" class="sidebar-link sub-item5">Promo Coupon Add</a>
-                  </div>
-               </div>
-               <a class="sidebar-link" href="help&support.html">
-                  <span><i class="fas fa-headset"></i></span>
-                  Help & Support
-               </a>
-               <a class="sidebar-link" href="contact_management.html">
-                  <span><i class="fa fa-user-cog"></i></span>
-                  Content Management
-               </a>
-               <!-- <a class="sidebar-link" href="Product.html"><span><i class="fa-solid fa-shopping-cart"></i></span>Product</a> -->
-               <a class="sidebar-link" href="login.html"><span><i class="fas fa-sign-out-alt"></i></span>
-                  Logout</a>
-            </div>
+                    <a class="sidebar-link" href="dashboard.html">
+                        <span><i class="fas fa-home"></i> </span>
+                        Dashboard
+                    </a>
+                    <a class="sidebar-link" href="users_management.html">
+                        <span><i class="fas fa-users"></i> </span>
+                        Users Management
+                    </a>
+                    <a class="sidebar-link" href="affiliate_management.html">
+                        <span><i class="fa-brands fa-affiliatetheme"></i></span>
+                        Affiliate Management
+                    </a>
+                    <a class="sidebar-link" href="orders_management.html">
+                        <span><i class="fa-brands fa-jedi-order"></i></span>
+                        Order Management
+                    </a>
+                    <a class="sidebar-link" href="Category_list.html">
+                        <span><i class="fa-solid fa-bag-shopping"></i></span>
+                        Category Management
+                    </a>
+                    <a class="sidebar-link" href="survey_management.html">
+                        <span><i class="fa-solid fa-fire-flame-curved"></i></span>
+                        Survey Management
+                    </a>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span class=""><i class="fa-solid fa-shopping-cart"></i></span>
+                                Products Management
+                            </div>
+                            <i class="fas fa-angle-right dropdown text-end"></i>
+                        </a>
+                        <div class="sub-menu mt-2">
+                            <a href="Product.html" class="sidebar-link sub-item">List Product</a>
+                            <a href="AddProduct.html" class="sidebar-link sub-item">Add Product</a>
+                        </div>
+                    </div>
+                    <a class="sidebar-link" href="loyalty_program_management.html">
+                        <span><i class="fa fa-map-marked"></i></span>
+                        Loyalty Management
+                    </a>
+                    <a class="sidebar-link" href="membership_plan.html">
+                        <span><i class="fas fa-hand-holding-usd"></i></span>
+                        Membership Plan
+                    </a>
+                    <a class="sidebar-link" href="reports_management.html">
+                        <span><i class="fa fa-file"></i></span>
+                        Reports Management
+                    </a>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span class=""><i class="fa-solid fa-bars-progress"></i></span>
+                                Banner Management
+                            </div>
+                            <i class="fas fa-angle-right dropdown2 text-end"></i>
+                        </a>
+                        <div class="sub-menu2 mt-2" style="display: none;">
+                            <a href="banner_management.html" class="sidebar-link sub-item2">Banner List</a>
+                            <a href="banner_add.html" class="sidebar-link sub-item2">Banner Add</a>
+                        </div>
+                    </div>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span class="">
+                                    <i class="fa-brands fa-buffer"></i>
+                                </span>
+                                Offer & Gifts
+                            </div>
+                            <i class="fas fa-angle-right dropdown3 text-end"></i>
+                        </a>
+                        <div class="sub-menu3 mt-2" style="display: none;">
+                            <a href="offer&gift_management.html" class="sidebar-link sub-item3">Offer & Gift List</a>
+                            <a href="offer_add.html" class="sidebar-link sub-item3">Offer & Gift Add</a>
+                        </div>
+                    </div>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span><i class="fa-solid fa-blog"></i></span>
+                                Blog Management
+                            </div>
+                            <i class="fas fa-angle-right dropdown4 text-end"></i>
+                        </a>
+                        <div class="sub-menu4 mt-2" style="display: none;">
+                            <a href="blog_management.html" class="sidebar-link sub-item4">Blog List</a>
+                            <a href="add_blog.html" class="sidebar-link sub-item4">Blog Add</a>
+                        </div>
+                    </div>
+                    <a class="sidebar-link" href="beauty_tips_&_news_management.html">
+                        <span><i class="fa-brands fa-gratipay"></i></span>
+                        Beauty Tips & News
+                    </a>
+                    <a class="sidebar-link" href="inventory_management.html">
+                        <span><i class="fa-solid fa-boxes-stacked"></i></span>
+                        Inventory Management
+                    </a>
+                    <a class="sidebar-link" href="payout_affiliate_management.html">
+                        <span><i class="fas fa-coins"></i></span>
+                        Pay-Out Affiliate
+                    </a>
+                    <a class="sidebar-link" href="refund_management.html">
+                        <span><i class="fa-solid fa-money-check-dollar"></i></span>
+                        Refund Management
+                    </a>
+                    <a class="sidebar-link" href="transaction_management.html">
+                        <span><i class="fas fa-sync-alt"></i></span>
+                        Transaction
+                    </a>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span><i class="fa-solid fa-ticket"></i></i></span>
+                                Promo Coupon
+                            </div>
+                            <i class="fas fa-angle-right dropdown5 text-end"></i>
+                        </a>
+                        <div class="sub-menu5 mt-2" style="display: none;">
+                            <a href="promo&coupon_management.html" class="sidebar-link sub-item5">Promo Coupon List</a>
+                            <a href="promo&coupon_add.html" class="sidebar-link sub-item5">Promo Coupon Add</a>
+                        </div>
+                    </div>
+                    <a class="sidebar-link" href="help&support.html">
+                        <span><i class="fas fa-headset"></i></span>
+                        Help & Support
+                    </a>
+                    <a class="sidebar-link" href="contact_management.html">
+                        <span><i class="fa fa-user-cog"></i></span>
+                        Content Management
+                    </a>
+                    <!-- <a class="sidebar-link" href="Product.html"><span><i class="fa-solid fa-shopping-cart"></i></span>Product</a> -->
+                    <a class="sidebar-link" href="login.html"><span><i class="fas fa-sign-out-alt"></i></span>
+                        Logout</a>
+                </div>
                 <div class="admin_contentpart">
                     <div class="mt-4">
                         <div class="bg-white shadow common_border_radius">
@@ -301,18 +305,22 @@
                                                     <td>12345</td>
                                                     <td>$50.00</td>
                                                     <td>
-                                                        <a href="" class="bg-main py-1 px-1 comman_border_design common_table_text">
+                                                        <a href="" class="text-success fw-semibold">
                                                             Pending
                                                         </a>
                                                     </td>
                                                     <td>
                                                         <div class="d-flex w-100 justify-content-center">
-                                                            <button class="comman_border_design common_table_text bg-main-2 py-1 px-1 me-2"
-                                                             data-bs-toggle="modal" data-bs-target="#acceptRefundModal" data-order-id="12345">
-                                                               Accept
+                                                            <button class="bg-light-btn text-success me-2"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#acceptRefundModal"
+                                                                data-order-id="12345">
+                                                                Accept
                                                             </button>
-                                                            <button class="bg-main-4 comman_border_design common_table_text py-1 px-1"
-                                                            data-bs-toggle="modal" data-bs-target="#rejectRefundModal" data-order-id="12345">
+                                                            <button class="bg-light-btn text-danger me-2"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#rejectRefundModal"
+                                                                data-order-id="12345">
                                                                 Reject
                                                             </button>
                                                         </div>
@@ -331,55 +339,57 @@
         </div>
 
 
-         <!-- Accept Refund Modal -->
-    <div class="modal fade" id="acceptRefundModal" tabindex="-1" aria-labelledby="acceptRefundModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-md">
-            <div class="modal-content px-4">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="acceptRefundModalLabel">Accept Refund Request</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="acceptRefundForm">
-                        <div class="mb-3">
-                            <label for="acceptOrderId" class="form-label">Order ID</label>
-                            <input type="text" class="form-control bg-white" id="acceptOrderId" readonly>
-                        </div>
-                        <div class="mb-3">
-                            <label for="acceptRefundAmount" class="form-label">Refund Amount</label>
-                            <input type="text" class="form-control bg-white" id="acceptRefundAmount" readonly>
-                        </div>
-                        <button type="submit" class="btn bg-main">Confirm Refund</button>
-                    </form>
+        <!-- Accept Refund Modal -->
+        <div class="modal fade" id="acceptRefundModal" tabindex="-1" aria-labelledby="acceptRefundModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content px-4">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="acceptRefundModalLabel">Accept Refund Request</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="acceptRefundForm">
+                            <div class="mb-3">
+                                <label for="acceptOrderId" class="form-label">Order ID</label>
+                                <input type="text" class="form-control bg-white" id="acceptOrderId" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="acceptRefundAmount" class="form-label">Refund Amount</label>
+                                <input type="text" class="form-control bg-white" id="acceptRefundAmount" readonly>
+                            </div>
+                            <button type="submit" class="btn bg-main">Confirm Refund</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Reject Refund Modal -->
-    <div class="modal fade" id="rejectRefundModal" tabindex="-1" aria-labelledby="rejectRefundModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-md">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="rejectRefundModalLabel">Reject Refund Request</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="rejectRefundForm">
-                        <div class="mb-3">
-                            <label for="rejectOrderId" class="form-label">Order ID</label>
-                            <input type="text" class="form-control bg-white" id="rejectOrderId" readonly>
-                        </div>
-                        <div class="mb-3">
-                            <label for="rejectReason" class="form-label">Reason for Rejection</label>
-                            <textarea class="form-control" id="rejectReason" rows="3" required></textarea>
-                        </div>
-                        <button type="submit" class="btn bg-main-3">Confirm Rejection</button>
-                    </form>
+        <!-- Reject Refund Modal -->
+        <div class="modal fade" id="rejectRefundModal" tabindex="-1" aria-labelledby="rejectRefundModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="rejectRefundModalLabel">Reject Refund Request</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="rejectRefundForm">
+                            <div class="mb-3">
+                                <label for="rejectOrderId" class="form-label">Order ID</label>
+                                <input type="text" class="form-control bg-white" id="rejectOrderId" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <label for="rejectReason" class="form-label">Reason for Rejection</label>
+                                <textarea class="form-control" id="rejectReason" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn bg-main-3">Confirm Rejection</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
         <script src="assets/vendor/jquery.min.js"></script>
         <script src="assets/js/sidebar.js"></script>
         <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

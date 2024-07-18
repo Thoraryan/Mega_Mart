@@ -64,4 +64,8 @@ $(document).ready(function () {
 function sideBarToggle() {
     $('.admin_siderbarr').toggleClass('admin_siderbarr_open');
     $('.admin_contentpart').toggleClass('w-100');
+    $('.main-content').toggleClass('admin_contentpart_main');
+}
+function add_image(element) {
+    $(element).addClass('d-none')
 }
