@@ -104,14 +104,32 @@
                         <span><i class="fa-brands fa-jedi-order"></i></span>
                         Order Management
                     </a>
-                    <a class="sidebar-link" href="Category_list.html">
-                        <span><i class="fa-solid fa-bag-shopping"></i></span>
-                        Category Management
-                    </a>
-                    <a class="sidebar-link" href="survey_management.html">
-                        <span><i class="fa-solid fa-fire-flame-curved"></i></span>
-                        Survey Management
-                    </a>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span><i class="fa-solid fa-bag-shopping"></i></span>
+                                Category Management
+                            </div>
+                            <i class="fas fa-angle-right dropdown6 text-end"></i>
+                        </a>
+                        <div class="sub-menu6 mt-2" style="display: none;">
+                            <a href="Category_list.html" class="sidebar-link sub-item6">Category List</a>
+                            <a href="add_category.html" class="sidebar-link sub-item6">Category Add</a>
+                        </div>
+                    </div>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span><i class="fa-solid fa-fire-flame-curved"></i></span>
+                                Survey Management
+                            </div>
+                            <i class="fas fa-angle-right dropdown6 text-end"></i>
+                        </a>
+                        <div class="sub-menu6 mt-2" style="display: none;">
+                            <a href="survey_management.html" class="sidebar-link sub-item6">Survey List</a>
+                            <a href="add_survey.html" class="sidebar-link sub-item6">Survey Add</a>
+                        </div>
+                    </div>
                     <div class="item w-100">
                         <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
                             <div>
@@ -229,8 +247,8 @@
                             <div class="py-4 px-4">
                                 <div class="row align-items-center justify-content-between">
                                     <div class="col-md-auto mb-md-0 mb-3">
-                                        <div class="">
-                                            <h2 class="mb-0 fs-5 fw-semibold">Order Management</h2>
+                                        <div class="headleft">
+                                            <h2 class="mb-0">Order Management</h2>
                                         </div>
                                     </div>
                                     <div class="col-md-4 d-flex align-items-center justify-content-end">
@@ -311,167 +329,105 @@
                                 <div class="tab-content" id="orderTabsContent">
                                     <div class="tab-pane fade show active" id="upcoming-orders" role="tabpanel"
                                         aria-labelledby="upcoming-orders-tab">
-                                        <div class="mt-2 row comman_table pt-md-3 pb-md-4 pb-3 px-md-3 px-2">
-                                            <h2 class="mb-0 fs-6 fw-semibold mb-2">Upcoming Order</h2>
-                                            <div class="table-responsive">
-                                                <table class="table table-hover">
-                                                    <thead>
-                                                        <tr class="text-center">
-                                                            <th scope="col">Order ID</th>
-                                                            <th scope="col">User Name</th>
-                                                            <th scope="col">Order Date & Time</th>
-                                                            <th scope="col">Payment Amount</th>
-                                                            <th sc>Status</th>
-                                                            <th scope="col">Actions</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr class="text-center" data-order-id="1">
-                                                            <td>#12345</td>
-                                                            <td>Jane Doe</td>
-                                                            <td>2023-07-12 14:30</td>
-                                                            <td>$99.99</td>
-                                                            <td>
-                                                                <div class="order-status">
-                                                                    <select class="custom-select">
-                                                                        <option value="">Status</option>
-                                                                        <option value="Order Placed">Order Placed
-                                                                        </option>
-                                                                        <option value="Order Pending">Order Pending
-                                                                        </option>
-                                                                        <option value="Order Picked">Order Picked
-                                                                        </option>
-                                                                        <option value="Order on The Way">Order on The
-                                                                            Way</option>
-                                                                        <option value="Order Delivered">Order Delivered
-                                                                        </option>
-                                                                        <option value="Order Cancel">Order Cancel
-                                                                        </option>
-                                                                    </select>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="d-flex gap-1 justify-content-center">
-                                                                    <button
-                                                                        class="btn Table_btn me-1 bg-main-4  view-order-btn">
-                                                                        <i class="fa fa-eye"></i>
-                                                                    </button>
-                                                                    <a class="bg-danger Table_btn">
-                                                                        <i class="fa fa-trash"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="text-center" data-order-id="1">
-                                                            <td>#12345</td>
-                                                            <td>Jane Doe</td>
-                                                            <td>2023-07-12 14:30</td>
-                                                            <td>$99.99</td>
-                                                            <td>
-                                                                <div class="order-status">
-                                                                    <select class="custom-select">
-                                                                        <option value="">Status</option>
-                                                                        <option value="Order Placed">Order Placed
-                                                                        </option>
-                                                                        <option value="Order Pending">Order Pending
-                                                                        </option>
-                                                                        <option value="Order Picked">Order Picked
-                                                                        </option>
-                                                                        <option value="Order on The Way">Order on The
-                                                                            Way</option>
-                                                                        <option value="Order Delivered">Order Delivered
-                                                                        </option>
-                                                                        <option value="Order Cancel">Order Cancel
-                                                                        </option>
-                                                                    </select>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="d-flex gap-1 justify-content-center">
-                                                                    <button
-                                                                        class="btn Table_btn me-1 bg-main-4  view-order-btn">
-                                                                        <i class="fa fa-eye"></i>
-                                                                    </button>
-                                                                    <a class="bg-danger Table_btn">
-                                                                        <i class="fa fa-trash"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="text-center" data-order-id="1">
-                                                            <td>#12345</td>
-                                                            <td>Jane Doe</td>
-                                                            <td>2023-07-12 14:30</td>
-                                                            <td>$99.99</td>
-                                                            <td>
-                                                                <div class="order-status">
-                                                                    <select class="custom-select">
-                                                                        <option value="">Status</option>
-                                                                        <option value="Order Placed">Order Placed
-                                                                        </option>
-                                                                        <option value="Order Pending">Order Pending
-                                                                        </option>
-                                                                        <option value="Order Picked">Order Picked
-                                                                        </option>
-                                                                        <option value="Order on The Way">Order on The
-                                                                            Way</option>
-                                                                        <option value="Order Delivered">Order Delivered
-                                                                        </option>
-                                                                        <option value="Order Cancel">Order Cancel
-                                                                        </option>
-                                                                    </select>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="d-flex gap-1 justify-content-center">
-                                                                    <button
-                                                                        class="btn Table_btn me-1 bg-main-4  view-order-btn">
-                                                                        <i class="fa fa-eye"></i>
-                                                                    </button>
-                                                                    <a class="bg-danger Table_btn">
-                                                                        <i class="fa fa-trash"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="text-center" data-order-id="1">
-                                                            <td>#12345</td>
-                                                            <td>Jane Doe</td>
-                                                            <td>2023-07-12 14:30</td>
-                                                            <td>$99.99</td>
-                                                            <td>
-                                                                <div class="order-status">
-                                                                    <select class="custom-select">
-                                                                        <option value="">Status</option>
-                                                                        <option value="Order Placed">Order Placed
-                                                                        </option>
-                                                                        <option value="Order Pending">Order Pending
-                                                                        </option>
-                                                                        <option value="Order Picked">Order Picked
-                                                                        </option>
-                                                                        <option value="Order on The Way">Order on The
-                                                                            Way</option>
-                                                                        <option value="Order Delivered">Order Delivered
-                                                                        </option>
-                                                                        <option value="Order Cancel">Order Cancel
-                                                                        </option>
-                                                                    </select>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="d-flex gap-1 justify-content-center">
-                                                                    <button
-                                                                        class="btn Table_btn me-1 bg-main-4  view-order-btn">
-                                                                        <i class="fa fa-eye"></i>
-                                                                    </button>
-                                                                    <a class="bg-danger Table_btn">
-                                                                        <i class="fa fa-trash"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                        <div class="row comman_table pt-md-3 pb-md-1 pb-3 px-md-3 px-2">
+                                            <div class="border common_border_radius py-4 border-2">
+                                                <h2 class="mb-0 fs-6 fw-bold mb-2 mx-3 text-main">Upcoming Order</h2>
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover mb-0">
+                                                        <thead>
+                                                            <tr class="text-center">
+                                                                <th>Order ID</th>
+                                                                <th>User Name</th>
+                                                                <th>Order Date & Time</th>
+                                                                <th>Payment Amount</th>
+                                                                <th>Status</th>
+                                                                <th>Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="text-center" data-order-id="1">
+                                                                <td>#12345</td>
+                                                                <td>Jane Doe</td>
+                                                                <td>2023-07-12 14:30</td>
+                                                                <td>$99.99</td>
+                                                                <td class="text-success fw-bold">
+                                                                    Order Placed
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex gap-1 justify-content-center">
+                                                                        <button
+                                                                            class="btn Table_btn me-1 bg-main-4  view-order-btn">
+                                                                            <i class="fa fa-eye"></i>
+                                                                        </button>
+                                                                        <a class="bg-danger Table_btn">
+                                                                            <i class="fa fa-trash"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="text-center" data-order-id="1">
+                                                                <td>#12345</td>
+                                                                <td>Jane Doe</td>
+                                                                <td>2023-07-12 14:30</td>
+                                                                <td>$99.99</td>
+                                                                <td class="text-success fw-bold">
+                                                                    Order Pending
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex gap-1 justify-content-center">
+                                                                        <button
+                                                                            class="btn Table_btn me-1 bg-main-4  view-order-btn">
+                                                                            <i class="fa fa-eye"></i>
+                                                                        </button>
+                                                                        <a class="bg-danger Table_btn">
+                                                                            <i class="fa fa-trash"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="text-center" data-order-id="1">
+                                                                <td>#12345</td>
+                                                                <td>Jane Doe</td>
+                                                                <td>2023-07-12 14:30</td>
+                                                                <td>$99.99</td>
+                                                                <td class="text-success fw-bold">
+                                                                    Order Picked
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex gap-1 justify-content-center">
+                                                                        <button
+                                                                            class="btn Table_btn me-1 bg-main-4  view-order-btn">
+                                                                            <i class="fa fa-eye"></i>
+                                                                        </button>
+                                                                        <a class="bg-danger Table_btn">
+                                                                            <i class="fa fa-trash"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="text-center" data-order-id="1">
+                                                                <td>#12345</td>
+                                                                <td>Jane Doe</td>
+                                                                <td>2023-07-12 14:30</td>
+                                                                <td>$99.99</td>
+                                                                <td class="text-success fw-bold">
+                                                                    Order In The Way
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex gap-1 justify-content-center">
+                                                                        <button
+                                                                            class="btn Table_btn me-1 bg-main-4  view-order-btn">
+                                                                            <i class="fa fa-eye"></i>
+                                                                        </button>
+                                                                        <a class="bg-danger Table_btn">
+                                                                            <i class="fa fa-trash"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -479,42 +435,44 @@
                                     <!-- Completed Orders -->
                                     <div class="tab-pane fade" id="completed-orders" role="tabpanel"
                                         aria-labelledby="completed-orders-tab">
-                                        <div class="mt-2 row comman_table pt-md-3 pb-md-4 pb-3 px-md-3 px-2">
-                                            <h2 class="mb-0 fs-6 fw-semibold mb-2">Complete Order</h2>
-                                            <div class="table-responsive">
-                                                <table class="table table-hover">
-                                                    <thead>
-                                                        <tr class="text-center">
-                                                            <th scope="col">Order ID</th>
-                                                            <th scope="col">User Name</th>
-                                                            <th scope="col">Order Date & Time</th>
-                                                            <th scope="col">Payment Amount</th>
-                                                            <th scope="col">Deliverd</th>
-                                                            <th scope="col">Deliverd Date & Time</th>
-                                                            <th scope="col">Actions</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr class="text-center" data-order-id="1">
-                                                            <td>#12345</td>
-                                                            <td>Jane Doe</td>
-                                                            <td>2023-07-12 14:30</td>
-                                                            <td>$99.99</td>
-                                                            <td>
-                                                                <a href="" class="text-success fw-semibold">
-                                                                    Deliverd
-                                                                </a>
-                                                            </td>
-                                                            <td>2023-07-12 14:30</td>
-                                                            <td>
-                                                                <button
-                                                                    class="btn Table_btn me-1 bg-main-4 view-order-btn">
-                                                                    <i class="fa fa-eye"></i>
-                                                                </button>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                        <div class="row comman_table pt-md-3 pb-md-1 pb-3 px-md-3 px-2">
+                                            <div class="border common_border_radius py-4 border-2">
+                                                <h2 class="mb-0 fs-6 fw-bold mb-2 mx-3 text-main">Complete Order</h2>
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover mb-0">
+                                                        <thead>
+                                                            <tr class="text-center">
+                                                                <th scope="col">Order ID</th>
+                                                                <th scope="col">User Name</th>
+                                                                <th scope="col">Order Date & Time</th>
+                                                                <th scope="col">Payment Amount</th>
+                                                                <th scope="col">Deliverd</th>
+                                                                <th scope="col">Deliverd Date & Time</th>
+                                                                <th scope="col">Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="text-center" data-order-id="1">
+                                                                <td>#12345</td>
+                                                                <td>Jane Doe</td>
+                                                                <td>2023-07-12 14:30</td>
+                                                                <td>$99.99</td>
+                                                                <td>
+                                                                    <a href="" class="text-success fw-semibold">
+                                                                        Deliverd
+                                                                    </a>
+                                                                </td>
+                                                                <td>2023-07-12 14:30</td>
+                                                                <td>
+                                                                    <button
+                                                                        class="btn Table_btn me-1 bg-main-4 view-order-btn">
+                                                                        <i class="fa fa-eye"></i>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -522,60 +480,62 @@
                                     <!-- Cancelled Orders -->
                                     <div class="tab-pane fade" id="cancelled-orders" role="tabpanel"
                                         aria-labelledby="cancelled-orders-tab">
-                                        <div class="mt-2 row comman_table pt-md-3 pb-md-4 pb-3 px-md-3 px-2">
-                                            <h2 class="mb-0 fs-6 fw-semibold mb-2">Cencel Order</h2>
-                                            <div class="table-responsive">
-                                                <table class="table table-hover">
-                                                    <thead>
-                                                        <tr class="text-center">
-                                                            <th scope="col">Order ID</th>
-                                                            <th scope="col">User Name</th>
-                                                            <th scope="col">Order Date & Time</th>
-                                                            <th scope="col">Amount</th>
-                                                            <th scope="col">Cancel</th>
-                                                            <th scope="col">cancel Date & Time</th>
-                                                            <th scope="col">Actions</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr class="text-center" data-order-id="1">
-                                                            <td>#12345</td>
-                                                            <td>Jane Doe</td>
-                                                            <td>2023-07-12 14:30</td>
-                                                            <td>$99.99</td>
-                                                            <td>
-                                                                <a href="" class="text-danger fw-semibold">
-                                                                    cancel
-                                                                </a>
-                                                            </td>
-                                                            <td>2023-07-12 14:30</td>
-                                                            <td>
-                                                                <button
-                                                                    class="btn Table_btn me-1 bg-main-4 view-order-btn">
-                                                                    <i class="fa fa-eye"></i>
-                                                                </button>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="text-center" data-order-id="1">
-                                                            <td>#12345</td>
-                                                            <td>Jane Doe</td>
-                                                            <td>2023-07-12 14:30</td>
-                                                            <td>$99.99</td>
-                                                            <td>
-                                                                <a href="" class="text-danger fw-semibold">
-                                                                    cancel
-                                                                </a>
-                                                            </td>
-                                                            <td>2023-07-12 14:30</td>
-                                                            <td>
-                                                                <button
-                                                                    class="btn Table_btn me-1 bg-main-4 view-order-btn">
-                                                                    <i class="fa fa-eye"></i>
-                                                                </button>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                        <div class="row comman_table pt-md-3 pb-md-1 pb-3 px-md-3 px-2">
+                                            <div class="border common_border_radius py-4 border-2">
+                                                <h2 class="mb-0 fs-6 fw-bold mb-2 mx-3 text-main">Cencel Order</h2>
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover mb-0">
+                                                        <thead>
+                                                            <tr class="text-center">
+                                                                <th scope="col">Order ID</th>
+                                                                <th scope="col">User Name</th>
+                                                                <th scope="col">Order Date & Time</th>
+                                                                <th scope="col">Amount</th>
+                                                                <th scope="col">Cancel</th>
+                                                                <th scope="col">cancel Date & Time</th>
+                                                                <th scope="col">Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="text-center" data-order-id="1">
+                                                                <td>#12345</td>
+                                                                <td>Jane Doe</td>
+                                                                <td>2023-07-12 14:30</td>
+                                                                <td>$99.99</td>
+                                                                <td>
+                                                                    <a href="" class="text-danger fw-semibold">
+                                                                        cancel
+                                                                    </a>
+                                                                </td>
+                                                                <td>2023-07-12 14:30</td>
+                                                                <td>
+                                                                    <button
+                                                                        class="btn Table_btn me-1 bg-main-4 view-order-btn">
+                                                                        <i class="fa fa-eye"></i>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="text-center" data-order-id="1">
+                                                                <td>#12345</td>
+                                                                <td>Jane Doe</td>
+                                                                <td>2023-07-12 14:30</td>
+                                                                <td>$99.99</td>
+                                                                <td>
+                                                                    <a href="" class="text-danger fw-semibold">
+                                                                        cancel
+                                                                    </a>
+                                                                </td>
+                                                                <td>2023-07-12 14:30</td>
+                                                                <td>
+                                                                    <button
+                                                                        class="btn Table_btn me-1 bg-main-4 view-order-btn">
+                                                                        <i class="fa fa-eye"></i>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

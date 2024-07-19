@@ -103,14 +103,32 @@
                         <span><i class="fa-brands fa-jedi-order"></i></span>
                         Order Management
                     </a>
-                    <a class="sidebar-link" href="Category_list.html">
-                        <span><i class="fa-solid fa-bag-shopping"></i></span>
-                        Category Management
-                    </a>
-                    <a class="sidebar-link" href="survey_management.html">
-                        <span><i class="fa-solid fa-fire-flame-curved"></i></span>
-                        Survey Management
-                    </a>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span><i class="fa-solid fa-bag-shopping"></i></span>
+                                Category Management
+                            </div>
+                            <i class="fas fa-angle-right dropdown6 text-end"></i>
+                        </a>
+                        <div class="sub-menu6 mt-2" style="display: none;">
+                            <a href="Category_list.html" class="sidebar-link sub-item6">Category List</a>
+                            <a href="add_category.html" class="sidebar-link sub-item6">Category Add</a>
+                        </div>
+                    </div>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span><i class="fa-solid fa-fire-flame-curved"></i></span>
+                                Survey Management
+                            </div>
+                            <i class="fas fa-angle-right dropdown6 text-end"></i>
+                        </a>
+                        <div class="sub-menu6 mt-2" style="display: none;">
+                            <a href="survey_management.html" class="sidebar-link sub-item6">Survey List</a>
+                            <a href="add_survey.html" class="sidebar-link sub-item6">Survey Add</a>
+                        </div>
+                    </div>
                     <div class="item w-100">
                         <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
                             <div>
@@ -224,42 +242,7 @@
                 </div>
                 <div class="admin_contentpart">
                     <div class="row">
-                        <div class="col-md-4 mt-4 mt-md-0">
-                            <div class="shadow common_border_radius py-4 px-4 bg-white">
-                                <div class="">
-                                    <h5 class="fs-4 fw-semibold text-capitalize">Add Category</h5>
-                                </div>
-                                <div class="form mt-4">
-                                    <div class="image-upload-wrapper w-100">
-                                        <label for="input-file" id="drop-area"
-                                            class="py-2 px-2 bg-white rounded-3 w-100">
-                                            <input type="file" accept="image/*" id="input-file" hidden>
-                                            <div id="img-view" class="py-4 px-4 rounded-3 w-100">
-                                                <!-- <div class=""> -->
-                                                <i class="fa-solid fa-cloud-arrow-up mb-1"></i>
-                                                <p class="fs-6 fw-light">upload image</p>
-                                                <!-- </div> -->
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="mt-4">
-                                        <label for="" class="fs-6 text-dark text-capitalize fw-light pb-1 mb-2">
-                                            Category name</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    <div class="mt-4">
-                                        <label for="" class="fs-6 text-dark text-capitalize fw-light pb-1 mb-2">
-                                            Category Description
-                                        </label>
-                                        <textarea name="" id="" class="form-control" rows="2"></textarea>
-                                    </div>
-                                    <div class="mt-4">
-                                        <button class="btn bg-main w-100 py-2">Add Category</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-8 mt-4 mt-md-0">
+                        <div class="col-md-12">
                             <div class="shadow common_border_radius py-4 bg-white">
                                 <div class="row align-items-center justify-content-between px-4">
                                     <div class="col-md-auto mb-md-0 mb-3">
@@ -268,7 +251,7 @@
                                             </h2>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 d-flex align-items-center justify-content-end">
+                                    <div class="col-md-6 d-flex align-items-center justify-content-end">
                                         <div class="searchh_box position-relative">
                                             <input class="form-control" type="search" placeholder="Search">
                                             <button><i class="fas fa-search"></i></button>
@@ -315,9 +298,10 @@
                                 <div class="row comman_table pt-md-3 pb-md-4 pb-3 px-md-3 px-2">
                                     <div class="col-12">
                                         <div class="table-responsive">
-                                            <table class="table table-hover border-0">
+                                            <table class="table table-hover mb-0 pb-0 border-0">
                                                 <thead>
                                                     <tr class="text-center">
+                                                        <th>Sr.No</th>
                                                         <th>Image</th>
                                                         <th>Name</th>
                                                         <th>Quantity</th>
@@ -327,6 +311,7 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr class="text-center">
+                                                        <td>1</td>
                                                         <td class="">
                                                             <div class="d-flex w-100 justify-content-center">
                                                                 <div class="w-fit h-fit py-1 px-1 bg-light">
@@ -346,13 +331,14 @@
                                                                 <button class="btn bg-main-3 Table_btn me-2">
                                                                     <i class="fa fa-edit"></i>
                                                                 </button>
-                                                                <button class="btn bg-danger Table_btn me-2">
+                                                                <button class="btn bg-danger Table_btn">
                                                                     <i class="fa fa-trash"></i>
                                                                 </button>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr class="text-center">
+                                                        <td>2</td>
                                                         <td class="">
                                                             <div class="d-flex w-100 justify-content-center">
                                                                 <div class="w-fit h-fit py-1 px-1 bg-light">
@@ -372,13 +358,14 @@
                                                                 <button class="btn bg-main-3 Table_btn me-2">
                                                                     <i class="fa fa-edit"></i>
                                                                 </button>
-                                                                <button class="btn bg-danger Table_btn me-2">
+                                                                <button class="btn bg-danger Table_btn">
                                                                     <i class="fa fa-trash"></i>
                                                                 </button>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr class="text-center">
+                                                        <td>3</td>
                                                         <td class="">
                                                             <div class="d-flex w-100 justify-content-center">
                                                                 <div class="w-fit h-fit py-1 px-1 bg-light">
@@ -398,7 +385,7 @@
                                                                 <button class="btn bg-main-3 Table_btn me-2">
                                                                     <i class="fa fa-edit"></i>
                                                                 </button>
-                                                                <button class="btn bg-danger Table_btn me-2">
+                                                                <button class="btn bg-danger Table_btn">
                                                                     <i class="fa fa-trash"></i>
                                                                 </button>
                                                             </div>

@@ -47,7 +47,8 @@
             <div class="admin_header">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-3 text-center d-flex gap-2 align-items-center">
-                        <button class="btn bg-main p-0 border-0 cursor-pointer d-lg-none d-block" onclick="sideBarToggle()">
+                        <button class="btn bg-main p-0 border-0 cursor-pointer d-lg-none d-block"
+                            onclick="sideBarToggle()">
                             <i class="fa fa-bars text-white fs-4 fw-semibold mb-0 pb-0"></i>
                         </button>
                         <a class="logo d-flex gap-2 align-items-center" href="dashboard.html">
@@ -60,8 +61,8 @@
                     <div class="col-auto">
                         <div class="row ">
                             <div class="col-auto pe-2 d-md-block d-none">
-                                <a class="language_change" href="javascript:;"><img src="assets/img/saudi_arabia_img.png"
-                                        alt="">Saudi Arabia</a>
+                                <a class="language_change" href="javascript:;"><img
+                                        src="assets/img/saudi_arabia_img.png" alt="">Saudi Arabia</a>
                             </div>
                             <div class="col-auto d-flex align-items-center">
                                 <div class="dropdown Profile_dropdown">
@@ -71,7 +72,8 @@
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li><a class="dropdown-item" href="view-profile.html">View Profile</a></li>
-                                        <li><a class="dropdown-item" href="change-password.html">Change Password</a></li>
+                                        <li><a class="dropdown-item" href="change-password.html">Change Password</a>
+                                        </li>
                                         <li><a class="dropdown-item" href="login.html">Logout</a></li>
                                     </ul>
                                 </div>
@@ -102,14 +104,32 @@
                         <span><i class="fa-brands fa-jedi-order"></i></span>
                         Order Management
                     </a>
-                    <a class="sidebar-link" href="Category_list.html">
-                        <span><i class="fa-solid fa-bag-shopping"></i></span>
-                        Category Management
-                    </a>
-                    <a class="sidebar-link" href="survey_management.html">
-                        <span><i class="fa-solid fa-fire-flame-curved"></i></span>
-                        Survey Management
-                    </a>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span><i class="fa-solid fa-bag-shopping"></i></span>
+                                Category Management
+                            </div>
+                            <i class="fas fa-angle-right dropdown6 text-end"></i>
+                        </a>
+                        <div class="sub-menu6 mt-2" style="display: none;">
+                            <a href="Category_list.html" class="sidebar-link sub-item6">Category List</a>
+                            <a href="add_category.html" class="sidebar-link sub-item6">Category Add</a>
+                        </div>
+                    </div>
+                    <div class="item w-100">
+                        <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
+                            <div>
+                                <span><i class="fa-solid fa-fire-flame-curved"></i></span>
+                                Survey Management
+                            </div>
+                            <i class="fas fa-angle-right dropdown6 text-end"></i>
+                        </a>
+                        <div class="sub-menu6 mt-2" style="display: none;">
+                            <a href="survey_management.html" class="sidebar-link sub-item6">Survey List</a>
+                            <a href="add_survey.html" class="sidebar-link sub-item6">Survey Add</a>
+                        </div>
+                    </div>
                     <div class="item w-100">
                         <a class="dropdown-btn sub-btn d-flex justify-content-between w-100 align-items-center gap-0">
                             <div>

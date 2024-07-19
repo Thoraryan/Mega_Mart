@@ -2628,7 +2628,8 @@ h6 {
 .dropdown2,
 .dropdown3,
 .dropdown4,
-.dropdown5 {
+.dropdown5,
+.dropdown6 {
   transition: 0.3s ease;
 }
 
@@ -2695,7 +2696,8 @@ h6 {
 .sub-item2,
 .sub-item3,
 .sub-item4,
-.sub-item5 {
+.sub-item5,
+.sub-item6 {
   padding-left: 47px !important;
 }
 

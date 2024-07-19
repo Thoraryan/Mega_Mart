@@ -15,8 +15,8 @@ $(document).ready(function () {
     $('.sub-btn').click(function () {
         const component = $(this).data('component');
         $(`.component[data-component=${component}] .sub-menu, .component[data-component=${component}] .sub-menu2`).not($(this).next()).slideUp();
-        $(this).next('.sub-menu, .sub-menu2, .sub-menu3,.sub-menu4,.sub-menu5').slideToggle();
-        $(this).find('.dropdown, .dropdown2,.dropdown3,.dropdown4,.dropdown5').toggleClass('rotate');
+        $(this).next('.sub-menu, .sub-menu2, .sub-menu3,.sub-menu4,.sub-menu5,.sub-menu6').slideToggle();
+        $(this).find('.dropdown, .dropdown2,.dropdown3,.dropdown4,.dropdown5,.dropdown6').toggleClass('rotate');
     });
 
     $('.menu-btn').click(function () {
@@ -25,12 +25,14 @@ $(document).ready(function () {
             .component[data-component=${component}] .side-bar2,
             .component[data-component=${component}] .side-bar3,
             .component[data-component=${component}] .side-bar4,
-            .component[data-component=${component}] .side-bar5`).addClass('active');
+            .component[data-component=${component}] .side-bar5,
+            .component[data-component=${component}] .side-bar6`).addClass('active');
         $(`.component[data-component=${component}] .menu-btn,
             .component[data-component=${component}] .menu-btn2,
             .component[data-component=${component}] .menu-btn3,
             .component[data-component=${component}] .menu-btn4,
-            .component[data-component=${component}] .menu-btn5`).css("visibility", "hidden");
+            .component[data-component=${component}] .menu-btn5,
+            .component[data-component=${component}] .menu-btn6`).css("visibility", "hidden");
     });
 
     $('.close-btn').click(function () {
@@ -39,12 +41,14 @@ $(document).ready(function () {
             .component[data-component=${component}] .side-bar2,
             .component[data-component=${component}] .side-bar3,
             .component[data-component=${component}] .side-bar4,
-            .component[data-component=${component}] .side-bar5`).removeClass('active');
+            .component[data-component=${component}] .side-bar5,
+            .component[data-component=${component}] .side-bar6`).removeClass('active');
         $(`.component[data-component=${component}] .menu-btn,
             .component[data-component=${component}] .menu-btn2,
             .component[data-component=${component}] .menu-btn3,
             .component[data-component=${component}] .menu-btn4,
-            .component[data-component=${component}] .menu-btn4`).css("visibility", "visible");
+            .component[data-component=${component}] .menu-btn5,
+            .component[data-component=${component}] .menu-btn6`).css("visibility", "visible");
     });
 });
 
