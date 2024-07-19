@@ -280,9 +280,10 @@ h6 {
 /*--------------------------------------------------------------
 # Sidebar css 
 --------------------------------------------------------------*/
-#loader img{
-    height: 30vh !important;
+#loader img {
+  height: 30vh !important;
 }
+
 .login_page {
   height: 100vh;
   background-image: url(../img/bg.jpg);
@@ -537,6 +538,7 @@ h6 {
   /* background: linear-gradient(45deg, #08226D, #EF00Fc, #8D06C5, #00DCF6); */
   background-color: #fff;
   color: #08226D;
+  border-radius: 14px;
   /* box-shadow: #08226D 0px 1px 4px; */
 }
 
@@ -2316,7 +2318,8 @@ h6 {
     padding: 20px;
     transition: .6s all;
   }
-  #loader img{
+
+  #loader img {
     height: 15vh !important;
   }
 }
@@ -2742,8 +2745,9 @@ h6 {
   padding: 5px 10px;
   background-color: #E6E6E6;
 }
-.add-icon{
- position: absolute;
+
+.add-icon {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -2757,4 +2761,27 @@ h6 {
   /* border: dashed; */
   color: #08226d;
   transition: .6s all;
+}
+
+@media (min-width: 200px) and (max-width:600px) {
+  .comman_inner_tabs .nav.nav-tabs {
+    background-color: #f2f2f2 !important;
+    width: fit-content;
+    margin-left: 14px;
+    border-radius: 50px !important;
+    overflow-x: scroll !important;
+    width: 90%;
+    overflow-y: hidden !important;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.comman_inner_tabs .nav.nav-tabs::-webkit-scrollbar {
+  width: 0px !important;
+}
+
+.comman_inner_tabs .nav.nav-tabs::-webkit-scrollbar-thumb {
+  width: 0px !important;
 }
